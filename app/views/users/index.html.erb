@@ -3,9 +3,12 @@
 <% end %>
 
 
+
+<p>ユーザ一覧</p>
 <% @user.each do |e|%>
     <p><%= e.uid %>
        <%= link_to '削除', "/users/#{e.id}" , method: :delete %>
+       <%= link_to 'つぶやく', '/tweets/new_tweet' %>
     </p>
 <% end %>
 
