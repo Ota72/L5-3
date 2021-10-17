@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_10_11_072257) do
     t.string "uid"
     t.string "pass"
     t.integer "age"
+    t.string "contents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

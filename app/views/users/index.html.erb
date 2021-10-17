@@ -3,11 +3,15 @@
 <% end %>
 
 
-
 <p>ユーザ一覧</p>
 <% @user.each do |e|%>
     <p><%= e.uid %>
+       <%= e.pass %>←暗号化確認用
+       「<%= e.contents %>」←プロフィール
        <%= link_to '削除', "/users/#{e.id}" , method: :delete %>
     </p>
+       
 <% end %>
+
+<p><%= link_to 'ホームへ', '/' %></p>
 

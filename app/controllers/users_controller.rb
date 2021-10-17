@@ -8,9 +8,9 @@ class UsersController < ApplicationController
     end
     
     def create
-      @user = User.new(uid: params[:uid] ,pass: BCrypt::Password.create(params[:pass]))
+      @user = User.new(uid: params[:uid] ,pass: BCrypt::Password.create(params[:pass]),contents: params[:contents])
       if @user.save
-        flash[:notice] = '追加しました'
+        flash[:notice] = params[:uid]+'さんをユーザに登録しました'
         redirect_to root_path
       else
         render 'new'
