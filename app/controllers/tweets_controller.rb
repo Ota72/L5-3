@@ -9,7 +9,8 @@ class TweetsController < ApplicationController
     
     def create
       @tweet = Tweet.new(message: params[:message])
-      #user= User.find_by(params[:id])
+      user= User.find_by(params[:id])
+      @tweet.user_id=user.id
       if @tweet.save
         flash[:notice] = 'つぶやきました'
         redirect_to root_path
