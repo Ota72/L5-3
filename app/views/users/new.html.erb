@@ -7,9 +7,13 @@
 <%= form_tag @user, method: :post do %>
     <%= label_tag :uid, 'ユーザーID' %>
     <%= text_field_tag :uid %>
-    <%= label_tag :pass, 'パスワード' %>
-    <%= password_field_tag :pass %>
+    <%= label_tag :password, 'パスワード' %>
+    <%= password_field_tag :password %>
+    <%= label_tag :password_confirmation, 'パスワード(確認)' %>
+    <%= password_field_tag :password_confirmation %>
     <%= label_tag :contents, 'プロフィール' %>
     <%= text_field_tag :contents %>
     <%= submit_tag '登録' %>
 <% end %>
+
+<p><%= link_to 'ホームへ', '/' %></p>
