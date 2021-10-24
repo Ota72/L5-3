@@ -21,8 +21,8 @@
     <p><%= link_to 'ログアウト', top_logout_path %></p>
 <% else %>
     <% @tweet.each do |t|%>
-        <p><%= t.message %>
-           <%= link_to '削除', "/tweets/#{t.id}" , method: :delete %>
+        <p>
+            <%= t.message %>
         </p>
     <% end %>
 
